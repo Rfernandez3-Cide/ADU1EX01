@@ -54,7 +54,7 @@ public class Main {
     private static boolean isBinaryFile(String filename) {
         String lower = filename.toLowerCase();
         return lower.endsWith(".jpg") || lower.endsWith(".jpeg") || lower.endsWith(".png") ||
-               lower.endsWith(".gif") || lower.endsWith(".bmp") || lower.endsWith(".pdf");
+                lower.endsWith(".gif") || lower.endsWith(".bmp") || lower.endsWith(".pdf");
     }
 
     /**
@@ -66,7 +66,7 @@ public class Main {
      */
     public static void copyBinaryFile(String origin, String destination) throws IOException {
         try (InputStream in = new FileInputStream(origin);
-             OutputStream out = new FileOutputStream(destination)) {
+                OutputStream out = new FileOutputStream(destination)) {
 
             byte[] buffer = new byte[1024]; // Buffer for reading bytes
             int length;
@@ -86,7 +86,7 @@ public class Main {
      */
     public static void copyTextFile(String origin, String destination) throws IOException {
         try (Reader in = new FileReader(origin);
-             Writer out = new FileWriter(destination)) {
+                Writer out = new FileWriter(destination)) {
 
             char[] buffer = new char[1024]; // Buffer for reading characters
             int length;
