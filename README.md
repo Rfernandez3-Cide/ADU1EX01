@@ -48,11 +48,11 @@ copyTextFileWithReaders(String source, String destination)
 
 Both stream and non-stream methods are demonstrated as required.
 
-Example Usage (MUST CHANGE)
-Enter source file path: data/image.png
-Enter destination file path: backup/image_copy.png
-Copying file using streams...
-File copied successfully!
+Example Usage
+Enter the name of the source file (e.g., file.jpg or file.xml):
+Enter the source folder path:
+Enter the destination folder path:
+Text file copied successfully or Binary file copied successfully.
 
 Notes
 
