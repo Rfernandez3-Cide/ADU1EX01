@@ -44,26 +44,12 @@ public class Main {
         scanner.close(); // Close the scanner to free resources
     }
 
-    /**
-     * Determines if a file is binary based on its extension.
-     * Treats common image and pdf extensions as binary files.
-     * 
-     * @param filename The name of the file
-     * @return true if file is binary, false otherwise
-     */
     private static boolean isBinaryFile(String filename) {
         String lower = filename.toLowerCase();
         return lower.endsWith(".jpg") || lower.endsWith(".jpeg") || lower.endsWith(".png") ||
                 lower.endsWith(".gif") || lower.endsWith(".bmp") || lower.endsWith(".pdf");
     }
 
-    /**
-     * Copies a binary file from origin to destination using byte streams.
-     * 
-     * @param origin      The source file path
-     * @param destination The destination file path
-     * @throws IOException If an I/O error occurs
-     */
     public static void copyBinaryFile(String origin, String destination) throws IOException {
         try (InputStream in = new FileInputStream(origin);
                 OutputStream out = new FileOutputStream(destination)) {
@@ -77,13 +63,6 @@ public class Main {
         }
     }
 
-    /**
-     * Copies a text file from origin to destination using character streams.
-     * 
-     * @param origin      The source file path
-     * @param destination The destination file path
-     * @throws IOException If an I/O error occurs
-     */
     public static void copyTextFile(String origin, String destination) throws IOException {
         try (Reader in = new FileReader(origin);
                 Writer out = new FileWriter(destination)) {
