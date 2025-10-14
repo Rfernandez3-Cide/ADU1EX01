@@ -71,7 +71,7 @@ public class Main {
     // Ask for the destination folder
     public static Path askDestinationFolder() throws IOException {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("👉 Enter the path of the destination folder: ");
+        System.out.print("Enter the path of the destination folder: ");
         String pathString = scanner.nextLine().trim();
         Path path = Paths.get(pathString);
 
