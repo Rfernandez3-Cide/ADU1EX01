@@ -130,7 +130,7 @@ public class Main {
 
     // Determine if the extension is binary
     public static boolean isBinaryExtension(String extension) {
-        String[] binaryExts = { "jpg", "jpeg", "png", "gif", "pdf", "exe" };
+        String[] binaryExts = { "jpg" };
         for (String ext : binaryExts) {
             if (ext.equalsIgnoreCase(extension))
                 return true;
