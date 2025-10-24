@@ -1,73 +1,27 @@
-# ADU1EX01
-ADU1EX01 Data Acces
-Java File Copier
+#ADU1EX01
 
-This is a simple Java application that allows users to copy files (either binary or character/text files) from one folder to another. The program prompts the user to input the source and destination file names, and determines whether to use stream-based or non-stream-based copying based on the file type.
+This program copies a file from a source path to a destination folder.
+It validates that the file exists and has an allowed extension (.jpg or .xml).
+Binary files are copied using byte streams, while text files are copied line by line using readers and writers.
+If successful, the program displays a confirmation message.
 
-Features
+Information about the development environment
+Operating System: Windows 11 (compatible with Linux and macOS)
+IDE: Visual Studio Code (VSCode)
+Java Version:openjdk version "25" 2025-09-16 LTS
+OpenJDK Runtime Environment Temurin-25+36 (build 25+36-LTS)
+OpenJDK 64-Bit Server VM Temurin-25+36 (build 25+36-LTS, mixed mode, sharing)
 
-Supports copying binary files (e.g., images, executables).
+Libraries used: java.io, java.nio.file, java.util.Scanner
 
-Supports copying text/character files.
+Load notebook (execution instructions)
 
-Automatically chooses between stream and non-stream methods.
+Open the project in your IDE.
 
-Uses both approaches (stream and non-stream) as required by the exercise.
+Compile the file Main.java.
 
-Requirements
+Run the program.
 
-Java JDK 8 or higher
+When prompted, enter the source file path and the destination folder path.
 
-A terminal or IDE to run the program
-
-How It Works
-
-The program asks the user for:
-
-Source file name (including path if needed)
-
-Destination file name (including path)
-
-File type: binary or text
-
-Based on the user’s input, it:
-
-Uses streams (InputStream/OutputStream) for binary files.
-
-Uses character-based readers/writers (FileReader/FileWriter) for text files.
-
-It performs the copy operation and notifies the user of success or failure.
-
-Code Structure
-
-The main logic is inside a single Java class. The core methods include:
-
-copyBinaryFileWithStreams(String source, String destination)
-
-copyTextFileWithReaders(String source, String destination)
-
-Both stream and non-stream methods are demonstrated as required.
-
-Example Usage
-Enter the name of the source file (e.g., file.jpg or file.xml):
-Enter the source folder path:
-Enter the destination folder path:
-Text file copied successfully or Binary file copied successfully.
-
-Notes
-
-Make sure the source file exists before running the program.
-
-The destination folder must have write permissions.
-
-Binary files should be copied using streams to avoid corruption.
-
-Learning Objectives
-
-This exercise helps practice:
-
-Working with file I/O in Java
-
-Understanding stream-based vs non-stream-based file operations
-
-Building console applications that interact with the user
+If both paths are valid, the file will be copied successfully.
